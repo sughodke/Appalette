@@ -40,8 +40,6 @@ function createRectangle(config) {
   return shape;
 }
 
-
-
 function createText(config) {
   var text = MSTextLayer.new();
   config.parent.addLayers([text]);
@@ -58,3 +56,29 @@ function createText(config) {
 function isSelected(code) {
   return code === 1000
 }
+
+function curlAsync(args, cb) {
+  var task = NSTask.alloc().init();
+  task.setLaunchPath("/usr/bin/curl");
+  task.setArguments(args);
+  log("/usr/bin/curl " + args.join(" "));
+  var outputPipe = [NSPipe pipe];
+  var errorPipe = [NSPipe pipe];
+  [task setStandardOutput:outputPipe];
+  [task setStandardError:errorPipe];
+  task.launch();
+  task.waitUntilExit();
+  var status = [task terminationStatus];
+
+  var errorData = [[errorPipe fileHandleForReading] readDataToEndOfFile];
+  var errorString = [[[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding]];
+
+  if (status == 0) {
+       var responseData = [[outputPipe fileHandleForReading] readDataToEndOfFile];
+       var responseString = [[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]];
+       cb(null, responseString);
+  } else {
+       cb("error", null);
+  }
+}
+

@@ -1,18 +1,10 @@
-<img src="https://github.com/Carlosarturo28/Appalette/raw/master/res/Appalette.gif" width="80%">
+I've forked Carlos's Sketch plugin to incorporate Colormind's color scheme generator.
 
-# Appalette
-[![Download from Sketchpacks.com](https://badges.sketchpacks.com/plugins/com.carlosnavarro.sketch.appalette/version.svg)](https://api.sketchpacks.com/v1/plugins/com.carlosnavarro.sketch.appalette/download) [![Compatible Sketch Version](https://badges.sketchpacks.com/plugins/com.carlosnavarro.sketch.appalette/compatibility.svg)](https://sketchpacks.com/Carlosarturo28/Appalette)
-
-A Sketch plugin that lets you find the color palette of _(almost)_ any App.
-
-<img src="https://github.com/Carlosarturo28/Appalette/blob/master/res/action.gif" width="100%">
+[Colormind](http://colormind.io) is a color scheme generator that uses deep learning. It can learn color styles from photographs, movies, and popular art. Different datasets are loaded each day. 
 
 ## Install
+This plugin is still a work in progress, and will change as things are added
 
-  <a href="http://bit.ly/SketchRunnerWebsite">
-      <img height="40" width="160" src="http://bit.ly/RunnerBadgeBlue">
-    </a>
-    
 1. Download and open **[Appalette-master.zip](https://github.com/carlosarturo28/appalette/archive/master.zip)**.
 2. Double click on `Appalette.sketchplugin` to install.  
 
@@ -32,14 +24,6 @@ You can quickly access the Appalette window by using the keyword shortcut <kbd>C
 
 ## License
 Appalette is released under the MIT license.  
-See [LICENSE](https://github.com/carlosarturo28/appalette/blob/master/LICENSE/) for details.
-
-## Some App is missing?
-
-Just [tweet](https://twitter.com/intent/tweet?text=Hey%20@cartur28,%20Appalette%20is%20missing%20this%20app:) me and I'll add it 🤓! 
-
-## Contact
-
-You can follow me on [Twitter](https://twitter.com/cartur28) and [CodePen](https://codepen.io/carlosarturo28/).
+See [LICENSE](https://github.com/sughodke/appalette/blob/master/LICENSE/) for details.
 
 

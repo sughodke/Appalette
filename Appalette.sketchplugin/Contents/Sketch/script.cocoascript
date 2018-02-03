@@ -3,12 +3,10 @@
 
 /*==========================================================
     Appalette for Sketch
-    Author: Carlos Navarro
+    Author: Sid Ghodke, orig. Carlos Navarro
 ==========================================================*/
 
 var onRun = function (context) {
-    // Require library files
-    @import 'lib/colors.js'
     @import 'lib/functions.js'
 
     var doc = context.document;
@@ -18,6 +16,14 @@ var onRun = function (context) {
     var artboard = doc.currentPage().currentArtboard();
     var canvas = artboard ? artboard : page;
 
+    swatchesGroup = createGroup({
+        parent: canvas,
+        name: 'Palette ',
+        x: 220 * index, y: 0,
+        width: 200, height: 4 * 50
+    });
+
+    /*
     // Get color info
     var choice = createSelect('Select the brand color you want:', COLORS, 0);
     var choiceCode = choice[0];
@@ -26,28 +32,11 @@ var onRun = function (context) {
 
     // Add color palette
     if (isSelected(choiceCode)) {
-        var userColorSets = [];
-        var swatchesGroups = [];
-
-        if (colorName !== 'All brands') {
-            COLORS[0] = colorName;
-            userColorSets = COLOR_SETS.filter(function (e, index) {
-                return index === colorIndex;
-            });
-        } else {
-            userColorSets = COLOR_SETS;
-        }
-
-        userColorSets.forEach(function (colorSet, index) {
-            swatchesGroups[index] = createGroup({
-                parent: canvas,
-                name: 'Palette ' + COLORS[index],
-                x: 220 * index, y: 0,
-                width: 200, height: colorSet.length * 50
-            });
-            colorSet.forEach(function (colorInfo, i) {
-                addHuePalette(index, colorInfo[0], colorInfo[1], i);
-            });
-        });
+        ...
+        query here
+        ...
     }
+    */
+
+   queryColormind()
 };
